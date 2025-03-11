@@ -94,6 +94,12 @@ document.addEventListener('DOMContentLoaded', function () {
       { nome: "Vini", img: "img/vini.png", stars: 5 },
    ];
 
+   criaCardJogador.sort((a, b) => {
+      if (a.nome < b.nome) return -1; // a vem antes de b
+      if (a.nome > b.nome) return 1;  // a vem depois de b
+      return 0; // são iguais
+   });
+   
    criaCardJogador.forEach(jogador => {
 
       let stars = "";
